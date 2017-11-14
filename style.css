@@ -1,0 +1,278 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@keyframes animacja {
+  25% {
+    opacity: 1; }
+  37% {
+    opacity: 0; } }
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px;
+  font-family: 'Quicksand', Arial, sans-serif; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+/*HEADER*/
+/**********/
+h2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  letter-spacing: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 700; }
+  h2:nth-of-type(2) {
+    text-transform: uppercase;
+    margin-top: 0; }
+
+header hr {
+  width: 30%;
+  border: 0;
+  height: 0.1rem;
+  background-color: rgba(169, 169, 169, 0.5); }
+
+/*************/
+/*SLIDER*/
+/************/
+#main {
+  margin-top: 2%;
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  overflow: hidden; }
+
+.textover {
+  display: none; }
+
+#main > div {
+  width: 100%;
+  height: 100%;
+  animation: animacja 20s ease infinite 0s;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+#main > div:nth-child(1) {
+  background: url("img/office.jpeg") center/cover no-repeat; }
+
+#main > div:nth-child(2) {
+  background: url("img/office2.jpeg") center/cover no-repeat;
+  animation-delay: 5s; }
+
+#main > div:nth-child(3) {
+  background: url("img/office3.jpeg") center/cover no-repeat;
+  animation-delay: 10s; }
+
+#main > div:nth-child(4) {
+  background: url("img/office4.jpeg") center/cover no-repeat;
+  animation-delay: 15s; }
+
+/*******/
+/*NAV*/
+/*******/
+nav {
+  overflow: hidden;
+  position: static;
+  top: 0;
+  left: 0; }
+  nav ul li a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    margin: 0.2rem;
+    font-size: 1.5rem;
+    background-color: #f7f7f7;
+    color: #999483;
+    letter-spacing: 1.005rem; }
+
+/************/
+/*SECTION*/
+/************/
+section {
+  width: 80%;
+  margin: 0 auto; }
+  section div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 10vh;
+    margin: 3rem 1.3rem;
+    background-color: #f7f7f7;
+    padding: 1.5rem; }
+    section div p {
+      display: none; }
+      section div p:first-of-type {
+        display: block;
+        margin-top: 2rem;
+        font-size: 2rem;
+        font-weight: 700; }
+
+section .material-icons {
+  font-size: 9rem;
+  color: #864949;
+  text-align: center; }
+
+section div .second {
+  width: 100%; }
+
+section hr {
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px dotted #864949; }
+
+.third {
+  display: block;
+  margin-top: 0.7rem;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  width: 80%;
+  text-align: justify;
+  min-height: 15vh;
+  background-color: #fff;
+  overflow: hidden; }
+
+/*********/
+/*Footer*/
+/********/
+.container1 {
+  min-width: 100%;
+  height: 15vh;
+  margin-top: 5rem;
+  background-color: rgba(240, 240, 240, 0.8); }
+
+.textfooter {
+  position: relative;
+  left: 10%;
+  top: 30%;
+  font-size: 1.5rem; }
+
+@media only screen and (min-width: 768px) {
+  /*************/
+  /*SLIDER*/
+  /************/
+  #main {
+    height: 50vh;
+    line-height: 1.68rem;
+    font-size: 1.2rem; }
+
+  .textover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    margin-top: 0;
+    right: 20rem;
+    height: 100%;
+    width: 23%;
+    text-align: left;
+    padding: 2rem;
+    background-color: rgba(240, 240, 240, 0.8); }
+    .textover p {
+      font-weight: 700;
+      font-size: 1.3rem; }
+
+  /*******/
+  /*NAV*/
+  /*******/
+  nav {
+    position: sticky; }
+    nav ul li a {
+      display: block;
+      float: left;
+      width: 20%;
+      margin: 0;
+      transition: all 2s ease;
+      border-left: 1px solid rgba(221, 212, 212, 0.88); }
+      nav ul li a:hover {
+        background-color: rgba(221, 212, 212, 0.88); }
+
+  /************/
+  /*SECTION*/
+  /************/
+  section div {
+    display: block;
+    float: left;
+    width: 30%;
+    transition: all 1.5s ease; }
+    section div:hover {
+      box-shadow: 0 0 1rem 0 #864949; }
+
+  section div p {
+    display: inline-block;
+    padding: 0.7rem 0;
+    font-size: 1.2rem; }
+    section div p:first-of-type {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-align: center; }
+
+  .second {
+    width: 45%; } }
+@media only screen and (min-width: 768px) and (max-width: 975px) {
+  /************/
+  /*SECTION*/
+  /************/
+  section div {
+    width: 29%;
+    z-index: -1; }
+    section div.second {
+      width: 45%; } }
